@@ -1,0 +1,29 @@
+$light:#FABF0D;
+$dark:#FF5100;
+$black:#1f1f1f;
+
+$primaryFontLight:"SofiaProRegular";
+$primaryFontRegular: "SofiaProLight";
+$primaryFontSemiBold: "SofiaProBold";
+$primaryFontBold: "SofiaProSemiBold";
+
+@font-face {
+    font-family: $primaryFontRegular;
+    src: url(../fonts/SofiaProRegular.ttf);
+  }
+
+  @font-face {
+    font-family: $primaryFontLight;
+    src: url(../fonts/SofiaProLight.ttf);
+  }
+
+  @font-face {
+    font-family: $primaryFontSemiBold;
+    src: url(../fonts/SofiaProSemiBold.ttf);
+  }
+
+  @font-face {
+    font-family: $primaryFontSemiBold;
+    src: url(../fonts/SofiaProSemiBold.ttf);
+  }
+

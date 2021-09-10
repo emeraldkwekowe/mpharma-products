@@ -1,3 +1,4 @@
+import "./assets/css/default.scss";
 
 const App = () => {
   return (
