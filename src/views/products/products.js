@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
 import { Header } from "../../layout/header/header";
+import { Sidebar } from "./components/sidebar";
+import { View } from "./pages/view/view";
+
+//Product Pages
+import "./products.scss"
 
 const Dashboard = () => {
     const [activePage, setActivePage] = useState(1);
@@ -20,7 +25,13 @@ const Dashboard = () => {
     }, [page])
 
     return(
-        <Header />
+        <>
+            <Header />
+            <main className="products">
+                <Sidebar />
+                <View />
+            </main>
+        </>
     )
 }
 

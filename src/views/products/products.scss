@@ -1,0 +1,52 @@
+@import "../../assets/css/preset";
+
+body{
+    background-image: url(../../assets/img/mp.svg);
+    background-position: 140% 260%;
+    background-repeat: no-repeat;
+}
+
+main.products{
+    display: flex;
+    gap:60px;
+
+    section{
+        h1{
+            font-size: 57px;
+            font-family: $primaryFontBold;
+            letter-spacing: -0.05em;
+            margin-bottom: 20px;
+        }    
+        table{
+            tr{
+                background:#fff;
+                box-shadow: 15px 15px 60px rgba(155, 67, 35, 0.08);
+                padding: 20px;
+                border-radius: 20px;
+                td{
+                    padding: 20px;
+                }
+                td.price{
+                    font-family: $primaryFontSemiBold;
+                    color:green;
+                }
+                td.price.one{
+                    opacity:0.7;
+                }
+                td.price.two{
+                    opacity:0.4;
+                }
+                td span{
+                    font-family: $primaryFontSemiBold;
+                }
+                td:first-of-type{
+                    border-radius: 20px 0px 0px 20px; 
+                }
+                td:last-of-type{
+                    border-radius: 0px 20px 20px 0px;
+                }
+               
+            }
+        }
+    }
+}

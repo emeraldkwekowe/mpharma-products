@@ -8,3 +8,31 @@ body{
     padding: 0;
     background:#FEFDF9;
 }
+
+.empty_line_a{
+    color:$color2;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+}
+.empty_line_a::after{
+    content:"";
+    height:2px;
+    width:60%;
+    bottom:-3px;
+    left:0;
+    background:$color2;
+    transition: all 0.4s ease;
+    position: absolute;
+}
+
+.empty_line_a:hover::after{
+    content:"";
+    height:2px;
+    width:80%;
+    transition: all 0.4s ease;
+    bottom:-3px;
+    left:0;
+    background:$color2;
+    position: absolute;
+}

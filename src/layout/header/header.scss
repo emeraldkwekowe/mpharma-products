@@ -1,10 +1,15 @@
 @import "../../assets/css/preset";
 
 header{
-    height: 80px;
+    height: 90px;
+    padding-top: 10px;
     width: auto;
     display: flex;
     justify-content: space-between;
+    img{
+        height: 50px !important;
+        margin-top: 20px;
+    }
     a.logo{
         width: 170px;
         height: 70px;

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="939" height="69" viewBox="0 0 939 69">
+  <g id="Group_951" data-name="Group 951" transform="translate(-441 -49)">
+    <rect id="Rectangle_2023" data-name="Rectangle 2023" width="939" height="69" rx="25" transform="translate(441 49)" opacity="0.051"/>
+    <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(465.046 71.583)" opacity="0.608">
+      <path id="Path_11" data-name="Path 11" d="M24.352,14.426A9.926,9.926,0,1,1,14.426,4.5a9.926,9.926,0,0,1,9.926,9.926Z" transform="translate(-4.5 -4.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_12" data-name="Path 12" d="M30.372,30.372l-5.4-5.4" transform="translate(-8.039 -8.039)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+    <text id="Search_for_a_product" data-name="Search for a product" transform="translate(519 90)" fill="#1f1e1e" font-size="20" font-family="SofiaPro-SemiBold, Sofia Pro" font-weight="600" opacity="0.283"><tspan x="0" y="0">Search for a product</tspan></text>
+  </g>
+</svg>

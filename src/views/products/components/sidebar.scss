@@ -1,0 +1,53 @@
+@import "../../../assets/css/preset";
+
+
+aside{
+    position: relative;
+    height:90vh;
+    box-sizing: border-box;
+    width: 300px;
+    nav {
+        padding-top:30px;
+        ul {
+            list-style-type: none;
+            margin: 30px;
+            padding: 0;
+            li {
+                display: flex;
+                a{
+                    color:$black;
+                    margin: 5px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    position: relative;
+                    padding: 15px 20px 16px;
+                    text-shadow: unset;
+                    font-size: 14px;
+                    letter-spacing: 0.04em;
+                    width: 100%;
+                    display: block;
+                    i{
+                        font-size: 17px !important;
+                        padding-right: 10px;
+                    }
+                }
+                a.current{
+                    background: $black;
+                    color: #fff;
+                    border-radius: 12px;
+                    font-family: $primaryFontBold;
+                    i{
+                        color:$color2;
+                    }
+                }
+            }
+        }
+    }
+    img{
+        position: absolute;
+        bottom:15px;
+        left:0;right:0;
+        margin: 0 auto;
+        height: 300px;
+    }
+}
