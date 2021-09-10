@@ -18,7 +18,18 @@ main.products{
             margin-bottom: 20px;
         }    
         table{
-            
+            thead{
+                tr{
+                    padding: 10px 10px !important;
+                    box-shadow: none !important;
+                    background: transparent;
+                    td{
+                        font-size:14px;
+                        padding: 10px 30px !important;
+                        font-family: $primaryFontBold;
+                    }    
+                }
+            }
             tr{
                 background:#fff;
                 box-shadow: 15px 15px 60px rgba(155, 67, 35, 0.08);

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 import "./sidebar.scss"
 import Image from "../../../components/Image/image";
 
-export const Sidebar = () => {
+export const Sidebar = props => {
     return(
         <aside>
              <nav>
@@ -12,7 +12,7 @@ export const Sidebar = () => {
                     <li><NavLink to="products/delete"><i className="fa fa-trash"></i>  Delete a product</NavLink></li>
                 </ul>
             </nav>
-            <Image src="person.svg" alt="Person" />
+            <Image onClick={() => props.setshowAddModal(true)} src="person.svg" alt="Person" />
 
         </aside>
     )
