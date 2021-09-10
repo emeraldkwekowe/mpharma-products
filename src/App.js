@@ -1,10 +1,12 @@
+import Routes from "./routes/index";
+
+//General app styling
 import "./assets/css/default.scss";
+
 
 const App = () => {
   return (
-    <div>
-      <h2>hello</h2>
-    </div>
+    <Routes />
   );
 }
 
