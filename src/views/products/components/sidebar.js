@@ -12,7 +12,7 @@ export const Sidebar = () => {
                     <li><NavLink to="products/delete"><i className="fa fa-trash"></i>  Delete a product</NavLink></li>
                 </ul>
             </nav>
-            {/* <Image src="person.svg" alt="Person" /> */}
+            <Image src="person.svg" alt="Person" />
 
         </aside>
     )

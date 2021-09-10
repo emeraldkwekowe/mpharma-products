@@ -9,6 +9,7 @@ import "./products.scss"
 const Dashboard = () => {
     const [activePage, setActivePage] = useState(1);
 
+    //Get the current page
     const url = window.location;
     const page = url.pathname.split("/")[2];
 
