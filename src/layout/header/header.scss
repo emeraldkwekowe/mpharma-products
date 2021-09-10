@@ -1,0 +1,59 @@
+@import "../../assets/css/preset";
+
+header{
+    height: 80px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    a.logo{
+        width: 170px;
+        height: 70px;
+        margin: 20px 30px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image:url(../../assets/img/logo.svg);
+    }
+    nav {
+        ul {
+            list-style-type: none;
+            margin: 30px;
+            padding: 0;
+            li {
+                display: inline;
+                a{
+                    color:$black;
+                    margin: 20px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    position: relative;
+                }
+                a.current:after{
+                    content: "";
+                    height:7px;
+                    width: 70%;
+                    transition: all 0.4s ease;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    z-index: -1;
+                    background: $color1;
+                }
+                a:hover{
+                    color:#000;
+                    font-family: $primaryFontBold;
+                    font-size: 15px;
+                }
+                a:hover:after{
+                    width: 90%;
+                    content: "";
+                    height:7px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    z-index: -1;
+                    background: $color1;
+                }
+            }
+      }
+    }
+}

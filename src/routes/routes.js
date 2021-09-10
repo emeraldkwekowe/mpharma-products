@@ -1,7 +1,7 @@
 import { lazy } from "react";
 
 const Landing = lazy(() => import("../views/landing/landing"));
-const Dashboard = lazy(() => import("../views/dashboard/dashboard"));
+const Products = lazy(() => import("../views/products/products"));
 
 const NotFoundPage = () => {
     return <h1>Page not found</h1>;
@@ -13,8 +13,12 @@ export const routes = [
         component:Landing
     },
     {
-        path:"/dashboard",
-        component:Dashboard
+        path:"/products",
+        component:Products
+    },
+    {
+        path:"/products/:action",
+        component:Products
     },
     {
         path:"*",

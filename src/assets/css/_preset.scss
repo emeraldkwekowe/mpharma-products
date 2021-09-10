@@ -1,5 +1,5 @@
-$light:#FABF0D;
-$dark:#FF5100;
+$color1:#FABF0D;
+$color2:#FF5100;
 $black:#1f1f1f;
 
 $primaryFontLight:"SofiaProRegular";
@@ -23,7 +23,7 @@ $primaryFontBold: "SofiaProSemiBold";
   }
 
   @font-face {
-    font-family: $primaryFontSemiBold;
-    src: url(../fonts/SofiaProSemiBold.ttf);
+    font-family: $primaryFontBold;
+    src: url(../fonts/SofiaProBold.ttf);
   }
 
