@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { useSelector } from "react-redux"
 import "./view.scss"
+import { ViewPriceHistory } from "./viewPriceHistory";
 
 export const View = () => {
+    const [selectedProduct, setselectedProduct] = useState(false);
+
     //Get Products from the redux store
     const products = useSelector(state => state.products);
     return(
@@ -10,11 +14,11 @@ export const View = () => {
            <table>
                <thead>
                    <tr>
-                       <td>S/N</td>
-                       <td>Title</td>
-                       <td>Current Price</td>
-                       <td>Old Price</td>
-                       <td>Action</td>
+                       <th>S/N</th>
+                       <th>Title</th>
+                       <th>Current Price</th>
+                       <th>Old Price</th>
+                       <th>Action</th>
                    </tr>
                </thead>
                <tbody>
@@ -38,7 +42,7 @@ export const View = () => {
                                     <td className={`price price_1`}>-</td>
                                 </>
                             }
-                            <td><span className="empty_line_a">View Price History</span></td>
+                            <td onClick={() => setselectedProduct(product)}><span className="empty_line_a">View Price History</span></td>
                         </tr>
                         )
                        })
@@ -46,6 +50,10 @@ export const View = () => {
                   
                </tbody>
            </table>
+           {
+                selectedProduct &&
+                <ViewPriceHistory product={selectedProduct} closeModal={() => setselectedProduct(false)}/>
+            }
        </section>
     )
 }

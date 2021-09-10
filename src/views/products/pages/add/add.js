@@ -21,8 +21,8 @@ const AddProduct = props => {
                 <form onSubmit={(e) => Submit(e)}>
 
                     <div>
-                        <label>Product Title</label>
-                        <input required onChange={(e) => setData({...data, title: e.target.value})} autoFocus id="title"/>
+                        <label>Product Name</label>
+                        <input required onChange={(e) => setData({...data, name: e.target.value})} autoFocus/>
                     </div>
 
                     <div>
