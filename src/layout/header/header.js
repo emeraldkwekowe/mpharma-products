@@ -1,5 +1,4 @@
 import { Link, NavLink } from "react-router-dom"
-import Image from "../../components/Image/image"
 import "./header.scss"
 
 export const Header = () => {
