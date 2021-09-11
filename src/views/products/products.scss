@@ -1,0 +1,157 @@
+@import "../../assets/css/preset";
+
+body{
+    background-image: url(../../assets/img/mp.svg);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+main.products{
+    display: flex;
+    gap:60px;
+    height: 90vh;
+    transition: all 0.4s ease;
+    margin-top: 0px;
+    section{
+        transition: all 0.4s ease;
+        h1{
+            font-size: 57px;
+            font-family: $primaryFontBold;
+            letter-spacing: -0.05em;
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }    
+        table{
+            transition: all 0.4s ease;
+
+            thead{
+                tr{
+                    padding: 10px 10px !important;
+                    box-shadow: none !important;
+                    background: transparent;
+                    th{
+                        font-size:14px;
+                        padding: 10px 30px !important;
+                        font-family: $primaryFontBold;
+                        text-align: left;
+                    }    
+                }
+            }
+            tr{
+                background:#fff;
+                box-shadow: 15px 15px 60px rgba(155, 67, 35, 0.08);
+                padding: 20px;
+                border-radius: 20px;
+                td{
+                    padding: 20px 30px;
+                    font-size: 15px;
+                    span{
+                        font-size: 14px;
+                    }
+                }
+                td.price{
+                    font-family: $primaryFontSemiBold;
+                    color:$green;
+                }
+                td.price_1{
+                    opacity:0.3;
+                    color: #000;
+                }
+                td.price_2{
+                    opacity:0.1;
+                    color: #000;
+                }
+                td span{
+                    font-family: $primaryFontSemiBold;
+                }
+                td:first-of-type{
+                    border-radius: 20px 0px 0px 20px; 
+                }
+                td:last-of-type{
+                    border-radius: 0px 20px 20px 0px;
+                }
+               
+            }
+            tr#current{
+                td{
+                    font-family: $primaryFontBold;
+                    color:$green !important;
+                }
+            }
+        }
+        .modal table{
+            td, th{
+                width: 50%;
+            }
+            th{
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1123px){
+    main.products{
+        gap:20px;
+        section table tr td{
+            padding: 20px 15px;
+            text-align: center;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1123px){
+    main.products{
+        padding-left: 40px;
+        padding-right: 40px;
+       section h1{
+            margin-top:40px;
+        }
+       aside{
+        //    display: none;
+           position: fixed;
+           background: #FEFDF9;
+           z-index: 9;
+           box-shadow:0px 0px 30px rgba(0,0,0,.1);
+           top:0;
+           height: 100vh;
+           left:-300px;
+           box-sizing: border-box;
+           padding-top:140px;
+           .close{
+               display: block;
+           }
+       }
+       section{
+           width: 100%;
+           table{
+               width: 100%;
+           }
+       }
+    }
+}
+
+@media screen and (max-width: 731px){
+    main.products{
+        padding-left: 25px;
+        section table .disposable, section table .price_1{
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px){
+  body{
+      background-position: 150px 121%;
+      main.products section h1{
+          line-height: 0.9em;
+          letter-spacing: -0.09em;
+          margin-top: 80px;
+          margin-bottom: 30px;
+          font-size: 39px;
+      }
+  }
+}
+

@@ -1,0 +1,111 @@
+@import "../../../assets/css/preset";
+
+
+aside{
+    position: relative;
+    height:90vh;
+    box-sizing: border-box;
+    width: 300px;
+    transition: all 0.4s ease;
+    nav {
+        padding-top:30px;
+        ul {
+            list-style-type: none;
+            margin: 30px;
+            padding: 0;
+            li {
+                display: flex;
+                a{
+                    color:$black;
+                    margin: 5px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    position: relative;
+                    padding: 15px 35px 16px;
+                    text-shadow: unset;
+                    font-size: 14px;
+                    letter-spacing: 0.04em;
+                    width: 100%;
+                    display: block;
+                    border-radius: 40px;
+                    i{
+                        font-size: 17px !important;
+                        padding-right: 10px;
+                    }
+                }
+                a:hover{
+                    background: rgba(0,0,0,.04);
+                }
+                a.current{
+                    background: $black;
+                    color: #fff;
+                    font-family: $primaryFontBold;
+                    i{
+                        color:$color2;
+                    }
+                }
+            }
+        }
+    }
+    span{
+        position: absolute !important;
+        bottom:20px;
+        left:0px;right:0;
+        margin: 0 auto;
+        z-index:9;
+        font-size:14px;
+        font-weight: 900;
+        text-decoration: underline;
+        cursor:pointer;
+        text-align: center;
+        padding:30px 50px 30px;
+    }
+    img:first-of-type{
+        position: absolute;
+        top:0;
+        height: 20px;
+        padding: 50px 42px;
+        cursor: pointer;
+    }
+    .close{
+        display: none;
+    }
+    img:last-of-type{
+        position: absolute;
+        bottom:45px;
+        left:-10px;right:0;
+        margin: 0 auto;
+        height: 130px;
+        transition: all 0.4s ease;
+        cursor: pointer;
+    }
+    img:hover{
+        transform:scale(1.06);
+    }
+}
+
+main.products{
+    aside.out{
+        left:0;
+    }
+}
+img.draw{
+    position: absolute;
+    top:44px;
+    left: 0px;
+    cursor: pointer;
+    height: 15px;
+}
+@media screen and (max-width: 500px){
+    aside{
+        height: 100vh !important;
+    }
+   aside nav ul li a{
+        padding: 15px 25px 16px;
+   }
+}
+@media screen and (min-width: 1123px){
+    img.draw{
+        display: none;
+    }
+}

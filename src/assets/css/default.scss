@@ -1,0 +1,52 @@
+@import "./preset";
+
+*{
+    font-family: $primaryFontRegular;
+}
+body{
+    margin: 0 auto;
+    padding: 0;
+    background:#FEFDF9;
+    max-width: 1500px;
+}
+#root{
+min-height: 120vh;
+width: 100%;
+}
+.loading_page{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background: #f4f4f4;
+    margin: 0 auto;
+    left:0;right:0;
+    top:40%;
+    position: absolute;
+}
+.empty_line_a{
+    color:$color2;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+}
+.empty_line_a::after{
+    content:"";
+    height:2px;
+    width:60%;
+    bottom:-3px;
+    left:0;
+    background:$color2;
+    transition: all 0.4s ease;
+    position: absolute;
+}
+
+.empty_line_a:hover::after{
+    content:"";
+    height:2px;
+    width:80%;
+    transition: all 0.4s ease;
+    bottom:-3px;
+    left:0;
+    background:$color2;
+    position: absolute;
+}

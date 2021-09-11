@@ -1,0 +1,87 @@
+@import "../../assets/css/preset";
+
+header{
+    height: 90px;
+    padding-top: 10px;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    img{
+        height: 50px !important;
+        margin-top: 20px;
+    }
+    a.logo{
+        min-width: 170px;
+        height: 70px;
+        margin: 20px 30px;
+        display: block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image:url(../../assets/img/logo.svg);
+    }
+    nav {
+
+        ul {
+            list-style-type: none;
+            margin: 30px;
+            padding: 0;
+
+            li {
+                display: inline;
+                a{
+                    color:$black;
+                    margin: 20px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    position: relative;
+                }
+                a.current:after{
+                    content: "";
+                    height:7px;
+                    width: 70%;
+                    transition: all 0.4s ease;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    z-index: -1;
+                    background: $color1;
+                }
+                a:hover{
+                    color:#000;
+                }
+                a:hover:after{
+                    width: 90%;
+                    content: "";
+                    height:7px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    z-index: -1;
+                    background: $color1;
+                }
+            }
+      }
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    header{
+        nav{
+            ul{
+                display: flex;
+                li:last-of-type{
+                    display: none;
+                }
+                li a{
+                    display: block;
+                    margin-top:0px;
+                    font-size: 15px;
+                }
+               
+            }
+        }
+    }
+}
