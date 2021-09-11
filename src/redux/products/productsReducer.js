@@ -1,10 +1,13 @@
 import { InitialproductState } from "./initialState";
-import { ADD_NEW_PRODUCT } from "./types";
+import { ADD_NEW_PRODUCT, EDIT_PRODUCT } from "./types";
 
 const productReducer = (state = InitialproductState, action) => {
     switch(action.type){
         case ADD_NEW_PRODUCT:
             return state = [...state, action.data]
+
+        case EDIT_PRODUCT:
+            return state = JSON.parse(action.data)
 
         case "CLEAR_STATE":
             return state = InitialproductState

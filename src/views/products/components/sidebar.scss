@@ -26,15 +26,18 @@ aside{
                     letter-spacing: 0.04em;
                     width: 100%;
                     display: block;
+                    border-radius: 17px;
                     i{
                         font-size: 17px !important;
                         padding-right: 10px;
                     }
                 }
+                a:hover{
+                    background: rgba(0,0,0,.04);
+                }
                 a.current{
                     background: $black;
                     color: #fff;
-                    border-radius: 17px;
                     font-family: $primaryFontBold;
                     i{
                         color:$color2;

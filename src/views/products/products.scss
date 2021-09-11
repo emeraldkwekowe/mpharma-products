@@ -45,7 +45,7 @@ main.products{
                 }
                 td.price{
                     font-family: $primaryFontSemiBold;
-                    color:green;
+                    color:$green;
                 }
                 td.price_1{
                     opacity:0.6;
@@ -63,6 +63,12 @@ main.products{
                     border-radius: 0px 20px 20px 0px;
                 }
                
+            }
+            tr#current{
+                td{
+                    font-family: $primaryFontBold;
+                    color:$green !important;
+                }
             }
         }
         .modal table{

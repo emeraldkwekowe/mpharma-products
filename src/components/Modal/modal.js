@@ -12,9 +12,9 @@ const Modal = props => {
         document.addEventListener("keydown", escFunction, false);
     }, [props])
     return(
-        <div className="modal">
+        <div className="modal animated fadeIn faster">
             <div className="modal_bg" onClick={props.close}></div>
-            {props.children}
+            <div className="animated fadeInUp faster modal_content_holder">{props.children}</div>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import Routes from "./routes/index";
 
-//General app styling
+//General app styling & animations
 import "./assets/css/default.scss";
 import "./assets/css/animate.scss";
 

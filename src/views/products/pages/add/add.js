@@ -5,7 +5,7 @@ import Modal from "../../../../components/Modal/modal";
 //Import function to add product to state
 import { AddNewProduct } from "../../../../redux/products/actions";
 
-const AddProduct = props => {
+export const AddProduct = props => {
     const dispatch = useDispatch();
     const [data, setData] = useState({})
     
@@ -41,4 +41,3 @@ const AddProduct = props => {
     )
 }
 
-export default AddProduct;

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Header } from "../../layout/header/header";
 import { Sidebar } from "./components/sidebar";
-import AddProduct from "./pages/add/add";
+import {AddProduct} from "./pages/add/add";
+import { Edit } from "./pages/edit/edit";
 import { View } from "./pages/view/view";
 
 //Product Pages
@@ -22,14 +23,22 @@ const Dashboard = () => {
         else if(page === "delete"){
             setActivePage(3);
         }
+        else{
+            setActivePage(1);
+        }
     }, [page])
 
     return(
         <>
             <Header />
             <main className="products">
-                <Sidebar setshowAddModal={setshowAddModal}/>
-                <View />
+                <Sidebar activePage={activePage} setshowAddModal={setshowAddModal}/>
+                {
+                    activePage === 1 ?
+                    <View />
+                    :
+                    <Edit />
+                }
                 {
                     showAddModal &&
                     <AddProduct closeModal={() => setshowAddModal(false)}/>

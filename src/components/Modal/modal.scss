@@ -23,17 +23,22 @@
         z-index: -1;
         cursor: pointer;
     }
-    .modal_content{
+    .modal_content_holder{
         max-width:500px;
         width: 97%;
-        padding: 30px 50px;
         height: auto;
-        background:#fff;
-        border-radius: 9px;
         position: relative;
         top:30px;
         left:0;right:0;
         margin: 0 auto;
+    }
+    .modal_content{
+        max-width:500px;
+        width: 100%;
+        padding: 30px 50px;
+        height: auto;
+        background:#fff;
+        border-radius: 9px;
         h3{
             margin: 0px;
             font-weight: 900;
