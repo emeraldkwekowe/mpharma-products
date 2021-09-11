@@ -1,7 +1,19 @@
-import { InitialproductState } from "./initialState";
+import { InitialproductState, normalizedState } from "./initialState";
 import { ADD_NEW_PRODUCT, EDIT_PRODUCT, DELETE_PRODUCT } from "./types";
 
-const productReducer = (state = InitialproductState, action) => {
+// import { normalize, schema } from 'normalizr';
+
+// const price = new schema.Entity('prices');
+
+// const product = new schema.Entity('products');
+
+// const normalizedData = normalize(InitialproductState, product);
+
+console.log(normalizedState);
+
+
+
+const productReducer = (state = normalizedState, action) => {
     switch(action.type){
         case ADD_NEW_PRODUCT:
             return state = [...state, action.data]
@@ -13,7 +25,7 @@ const productReducer = (state = InitialproductState, action) => {
             return state = JSON.parse(action.data)
             
         case "CLEAR_STATE":
-            return state = InitialproductState
+            return state = normalizedState
 
         //Add Product
         default: 
