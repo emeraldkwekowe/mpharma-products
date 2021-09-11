@@ -1,5 +1,5 @@
 import { toast } from "react-toastify";
-import { ADD_NEW_PRODUCT, EDIT_PRODUCT } from "./types";
+import { ADD_NEW_PRODUCT, EDIT_PRODUCT, DELETE_PRODUCT } from "./types";
 
 
 //Action to add a new product to redux state
@@ -33,9 +33,7 @@ export const EditProductInState = (data, products) => dispatch => {
     const {price, name, id} = data;
     const date = new Date();
     const index = products.findIndex((item, i) => item.id === id)
-
     const newProducts = products;
-
     newProducts[index].name = name;
 
     if(isNaN(parseInt(price))){
@@ -57,6 +55,21 @@ export const EditProductInState = (data, products) => dispatch => {
     })
     
     toast.success(`Product edited successfully`,  { theme: "colored" });
+}
+
+
+//Action to edit a product from redux state
+export const DeleteProductInState = (data, products) => dispatch => {
+    const {id} = data;
+    const index = products.findIndex((item, i) => item.id === id)
+    const removeProduct = products.splice(index, 1);
+
+    dispatch({
+        type: DELETE_PRODUCT,
+        data: JSON.stringify(products)
+    })
+    
+    toast.success(`Product deleted successfully`,  { theme: "colored" });
 }
 
 

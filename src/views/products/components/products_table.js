@@ -6,7 +6,10 @@ export const ProductsTable = props => {
     //Get Products from the redux store
     const products = useSelector(state => state.products);
     return(
-        <table className="animated fadeInRight delay-1s">
+        products.length < 1 ?
+        <p>There are currently no products. <span onClick={() => props.setshowAddModal(true)} className="empty_line_a">Create some?</span></p>
+        :
+        <table className="animated fadeInRight delay-1s faster">
         <thead>
             <tr>
                 <th>S/N</th>

@@ -4,6 +4,7 @@ import { Sidebar } from "./components/sidebar";
 import {AddProduct} from "./pages/add/add";
 import { Edit } from "./pages/edit/edit";
 import { View } from "./pages/view/view";
+import { Delete } from "./pages/delete/delete";
 
 //Product Pages
 import "./products.scss"
@@ -35,9 +36,12 @@ const Dashboard = () => {
                 <Sidebar activePage={activePage} setshowAddModal={setshowAddModal}/>
                 {
                     activePage === 1 ?
-                    <View />
+                    <View setshowAddModal={setshowAddModal}/>
                     :
-                    <Edit />
+                    activePage === 2 ?
+                    <Edit setshowAddModal={setshowAddModal}/>
+                    :
+                    <Delete setshowAddModal={setshowAddModal}/>
                 }
                 {
                     showAddModal &&

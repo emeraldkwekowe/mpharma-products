@@ -1,5 +1,5 @@
 import { InitialproductState } from "./initialState";
-import { ADD_NEW_PRODUCT, EDIT_PRODUCT } from "./types";
+import { ADD_NEW_PRODUCT, EDIT_PRODUCT, DELETE_PRODUCT } from "./types";
 
 const productReducer = (state = InitialproductState, action) => {
     switch(action.type){
@@ -9,6 +9,9 @@ const productReducer = (state = InitialproductState, action) => {
         case EDIT_PRODUCT:
             return state = JSON.parse(action.data)
 
+        case DELETE_PRODUCT:
+            return state = JSON.parse(action.data)
+            
         case "CLEAR_STATE":
             return state = InitialproductState
 

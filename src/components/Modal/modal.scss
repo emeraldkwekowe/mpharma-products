@@ -16,7 +16,7 @@
         z-index: 9999999;
         position: fixed;
         top:0;
-        background:rgba(0,0,0,.6);
+        background:rgba(0,0,0,.4);
         overflow:auto;
         left:0;
         position: absolute;
@@ -24,17 +24,17 @@
         cursor: pointer;
     }
     .modal_content_holder{
-        max-width:500px;
+        max-width:600px;
         width: 97%;
         height: auto;
-        position: relative;
-        top:30px;
+        position: fixed;
+        top:50px;
         left:0;right:0;
         margin: 0 auto;
     }
     .modal_content{
-        max-width:500px;
         width: 100%;
+        box-sizing: border-box;
         padding: 30px 50px;
         height: auto;
         background:#fff;
