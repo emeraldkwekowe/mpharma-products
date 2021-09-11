@@ -14,10 +14,10 @@ export const ProductsTable = props => {
         <table className="animated fadeInRight delay-1s faster">
         <thead>
             <tr>
-                <th>S/N</th>
+                <th className="disposable">S/N</th>
                 <th>Title</th>
                 <th>Current Price</th>
-                <th>Old Price</th>
+                <th className="disposable">Old Price</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -29,7 +29,7 @@ export const ProductsTable = props => {
                 const productPriceHistory = product.prices;
                 return(
                  <tr key={i}>
-                      <td>#{i+1}</td>
+                      <td className="disposable">#{i+1}</td>
                       <td>{product.name}</td>
                       {
                          productPriceHistory.length > 1 ?

@@ -6,11 +6,10 @@ export const Header = () => {
     return(
         <header>
             <Link className="logo" to="/"></Link>
-            <Image src="input.svg" alt="in" />
             <nav>
                 <ul>
                     <li><NavLink to="" className="current">Products</NavLink></li>
-                    <li><NavLink to="">Website</NavLink></li>
+                    <li><a href="https://mpharma.com/" target="_blank" rel="noreferrer">Website</a></li>
                 </ul>
             </nav>
         </header>

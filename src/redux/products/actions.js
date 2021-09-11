@@ -98,4 +98,6 @@ export const clearState = () => dispatch => {
     dispatch({
         type: "CLEAR_STATE"
     })
+    toast.success(`State reset successfully`,  { theme: "colored" });
+
 }

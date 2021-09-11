@@ -4,12 +4,25 @@
     font-family: $primaryFontRegular;
 }
 body{
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     background:#FEFDF9;
-    min-width: 1200px;
+    max-width: 1500px;
 }
-
+#root{
+min-height: 120vh;
+width: 100%;
+}
+.loading_page{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background: #f4f4f4;
+    margin: 0 auto;
+    left:0;right:0;
+    top:40%;
+    position: absolute;
+}
 .empty_line_a{
     color:$color2;
     cursor: pointer;

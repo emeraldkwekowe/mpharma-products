@@ -3,7 +3,9 @@
 header{
     height: 90px;
     padding-top: 10px;
-    width: auto;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     img{
@@ -11,18 +13,21 @@ header{
         margin-top: 20px;
     }
     a.logo{
-        width: 170px;
+        min-width: 170px;
         height: 70px;
         margin: 20px 30px;
+        display: block;
         background-size: contain;
         background-repeat: no-repeat;
         background-image:url(../../assets/img/logo.svg);
     }
     nav {
+
         ul {
             list-style-type: none;
             margin: 30px;
             padding: 0;
+
             li {
                 display: inline;
                 a{
@@ -45,8 +50,6 @@ header{
                 }
                 a:hover{
                     color:#000;
-                    font-family: $primaryFontBold;
-                    font-size: 15px;
                 }
                 a:hover:after{
                     width: 90%;
@@ -60,5 +63,25 @@ header{
                 }
             }
       }
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    header{
+        nav{
+            ul{
+                display: flex;
+                li:last-of-type{
+                    display: none;
+                }
+                li a{
+                    display: block;
+                    margin-top:0px;
+                    font-size: 15px;
+                }
+               
+            }
+        }
     }
 }

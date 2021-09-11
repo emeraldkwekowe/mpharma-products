@@ -1,10 +1,8 @@
-import { useDispatch } from "react-redux";
-import { clearState } from "../../redux/products/actions";
+import { Redirect } from "react-router";
 
 const Landing = () => {
-    const dispatch = useDispatch();
     return(
-        <span onClick={() => dispatch(clearState())} className="empty_line_a">kill redux</span>
+        <Redirect to="/products" />
     )
 }
 

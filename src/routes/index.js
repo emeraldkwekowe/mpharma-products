@@ -5,7 +5,7 @@ import { Suspense } from "react";
 const Routes = () => {
     return(
         <BrowserRouter>
-            <Suspense fallback={<h1>loading...</h1>}>
+            <Suspense fallback={<div className="animated pulse infinite loading_page"></div>}>
             <Switch>
                 {
                     routes.map((route, i) => (

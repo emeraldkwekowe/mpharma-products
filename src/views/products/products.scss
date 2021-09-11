@@ -2,22 +2,28 @@
 
 body{
     background-image: url(../../assets/img/mp.svg);
-    background-position: 140% 260%;
+    background-position: bottom right;
     background-repeat: no-repeat;
 }
 
 main.products{
     display: flex;
     gap:60px;
-
+    height: 90vh;
+    transition: all 0.4s ease;
+    margin-top: 0px;
     section{
+        transition: all 0.4s ease;
         h1{
             font-size: 57px;
             font-family: $primaryFontBold;
             letter-spacing: -0.05em;
+            margin-top: 0px;
             margin-bottom: 20px;
         }    
         table{
+            transition: all 0.4s ease;
+
             thead{
                 tr{
                     padding: 10px 10px !important;
@@ -83,3 +89,69 @@ main.products{
         }
     }
 }
+
+@media screen and (max-width: 1123px){
+    main.products{
+        gap:20px;
+        section table tr td{
+            padding: 20px 15px;
+            text-align: center;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1123px){
+    main.products{
+        padding-left: 40px;
+        padding-right: 40px;
+       section h1{
+            margin-top:40px;
+        }
+       aside{
+        //    display: none;
+           position: fixed;
+           background: #FEFDF9;
+           z-index: 9;
+           box-shadow:0px 0px 30px rgba(0,0,0,.1);
+           top:0;
+           height: 100vh;
+           left:-300px;
+           box-sizing: border-box;
+           padding-top:140px;
+           .close{
+               display: block;
+           }
+       }
+       section{
+           width: 100%;
+           table{
+               width: 100%;
+           }
+       }
+    }
+}
+
+@media screen and (max-width: 731px){
+    main.products{
+        padding-left: 25px;
+        section table .disposable, section table .price_1{
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px){
+  body{
+      background-position: 150px 121%;
+      main.products section h1{
+          line-height: 0.9em;
+          letter-spacing: -0.09em;
+          margin-top: 80px;
+          margin-bottom: 30px;
+          font-size: 39px;
+      }
+  }
+}
+
