@@ -1,25 +1,41 @@
-import { InitialproductState, normalizedState } from "./initialState";
+import { normalizedState } from "./initialState";
 import { ADD_NEW_PRODUCT, EDIT_PRODUCT, DELETE_PRODUCT } from "./types";
-
-// import { normalize, schema } from 'normalizr';
-
-// const price = new schema.Entity('prices');
-
-// const product = new schema.Entity('products');
-
-// const normalizedData = normalize(InitialproductState, product);
-
-console.log(normalizedState);
 
 
 
 const productReducer = (state = normalizedState, action) => {
     switch(action.type){
         case ADD_NEW_PRODUCT:
-            return state = [...state, action.data]
+            return state = {
+                ...state,
+                 entities:{
+                     ...state.entities,
+                     products:{
+                         ...state.entities.products,
+                         [action.product.id]:action.product
+                     },
+                    productIds:[...state.entities.productIds, action.product.id],
+                    prices:{
+                        ...state.entities.prices,
+                        [action.productPrice.id] : action.productPrice
+                    },
+                    priceIds:[...state.entities.priceIds, action.productPrice.id]
+                 }
+            }
 
         case EDIT_PRODUCT:
-            return state = JSON.parse(action.data)
+            return state = {
+                ...state,
+                 entities:{
+                     ...state.entities,
+                    products:{
+                        ...state.entities.products,
+                        [action.product.id]:action.product
+                    },
+                    priceIds:action.priceIds,
+                    prices: action.prices
+                }
+            }
 
         case DELETE_PRODUCT:
             return state = JSON.parse(action.data)
@@ -33,7 +49,5 @@ const productReducer = (state = normalizedState, action) => {
     }
 } 
 
-//Set the value of the last id for manual update (Not proper; typically should be set automatically from an ideal databse)
-localStorage.setItem("last_product_id", 3);
 
 export default productReducer;

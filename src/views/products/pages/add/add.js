@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Modal from "../../../../components/Modal/modal";
 
 //Import function to add product to state
@@ -8,10 +8,15 @@ import { AddNewProduct } from "../../../../redux/products/actions";
 export const AddProduct = props => {
     const dispatch = useDispatch();
     const [data, setData] = useState({})
+
+    //Get data from the redux store (improvised db)
+    const productsList = useSelector(state => state.products.entities.productIds);
+    const priceList = useSelector(state => state.products.entities.priceIds);
     
     const Submit = async e => {
         e.preventDefault();
-        dispatch(AddNewProduct(data))
+
+        dispatch(AddNewProduct(data, productsList.length === 0 ? 0 : productsList[productsList.length - 1], priceList[priceList.length - 1]))
         props.closeModal();
     }
     return(

@@ -48,10 +48,12 @@ main.products{
                     color:$green;
                 }
                 td.price_1{
-                    opacity:0.6;
+                    opacity:0.3;
+                    color: #000;
                 }
                 td.price_2{
-                    opacity:0.4;
+                    opacity:0.1;
+                    color: #000;
                 }
                 td span{
                     font-family: $primaryFontSemiBold;

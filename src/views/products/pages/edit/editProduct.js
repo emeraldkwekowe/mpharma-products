@@ -6,8 +6,9 @@ import Modal from "../../../../components/Modal/modal";
 import { EditProductInState } from "../../../../redux/products/actions";
 
 export const EditProduct = props => {
-    //Get Products from the redux store
-    const products = useSelector(state => state.products);
+    //Get Prices from the redux store
+    const priceList = useSelector(state => state.products.entities.priceIds);
+    const prices = useSelector(state => state.products.entities.prices);
 
     const dispatch = useDispatch();
     const product = props.product;
@@ -15,7 +16,7 @@ export const EditProduct = props => {
     
     const Submit = async e => {
         e.preventDefault();
-        dispatch(EditProductInState(data, products))
+        dispatch(EditProductInState(data, product.prices, priceList, prices))
         props.closeModal();
     }
     return(
