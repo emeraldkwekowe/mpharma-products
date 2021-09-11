@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import Image from "../image";
 
 
-test('renders image with alt and inherits class from props', () => {
+test('renders image with `alt` provided and inherits class from props', () => {
     const alt = "drag";
     const className = "mycustomclass";
 
@@ -11,7 +11,7 @@ test('renders image with alt and inherits class from props', () => {
     expect(imgElement).toHaveClass(className);
 })
 
-test('renders a paragraph asking for an alt before image is displayed', () => {
+test('renders a paragraph asking for `alt` before image is displayed', () => {
     render(<Image src="drag.svg"/>)
 
     const altPElement = screen.getByTestId("alt_enforcement_p");
