@@ -1,4 +1,4 @@
-# Mpharma Developer test | Emerald Kwekowe
+# mPharma Developer test
 
 Built with React, styled with custom css & sass.
 
