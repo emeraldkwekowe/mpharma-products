@@ -38,7 +38,7 @@ main.products{
                 }
             }
             tr{
-                background:#fff;
+                background:#efe9cf;
                 box-shadow: 15px 15px 60px rgba(155, 67, 35, 0.08);
                 padding: 20px;
                 border-radius: 20px;
@@ -80,11 +80,22 @@ main.products{
             }
         }
         .modal table{
+            border-collapse: collapse;
+            border:none !important;
+            margin-bottom: 30px;
             td, th{
                 width: 50%;
             }
             th{
                 text-align: left;
+            }
+            tr{
+                box-shadow: none !important;
+                background: 0;
+                border-bottom:1px solid #eee;
+            }
+            tr:last-child{
+                border-bottom:0;
             }
         }
     }
